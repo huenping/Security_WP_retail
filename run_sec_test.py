@@ -7,6 +7,11 @@ import time
 import os
 
 # 发送邮件
+sender = 'huep@goldensecurity.com.cn'
+receives = ['huep@goldensecurity.com.cn',
+            'wanghb@goldensecurity.com.cn',
+            'liuxiao@goldensecurity.com.cn'
+            ]
 
 
 def send_mail(file_new):
@@ -19,7 +24,7 @@ def send_mail(file_new):
     smtp = smtplib.SMTP()
     smtp.connect("smtp.goldensecurity.com.cn")
     smtp.login("huep@goldensecurity.com.cn", "absenSXD0115")
-    smtp.sendmail("huep@goldensecurity.com.cn", "huep@goldensecurity.com.cn", msg.as_string())
+    smtp.sendmail(sender, receives, msg.as_string())
     smtp.quit()
     print('email has send success!')
 
@@ -38,11 +43,11 @@ if __name__ == '__main__':
     filename = './retail/report/' + now + 'result.html'
     fp = open(filename, 'wb')
     runner = HTMLTestRunner(stream=fp,
-                            title='文件管理系统(4.2.2版本）UI自动化测试报告',
+                            title='文件管理系统(网盘）UI自动化测试报告',
                             description='版本：Windows 10 专业版 内存：16G 浏览器：Chrome')
     discover = unittest.defaultTestLoader.discover('./retail/test_case',
                                                    pattern='*_sta.py')
     runner.run(discover)
     fp.close()       # 关闭生成的报告
     file_path = new_report('./retail/report/')     # 查找新生成的报告
-    send_mail(file_path)                          # 调用发邮件模块
+    send_mail(file_path)                           # 调用发邮件模块
