@@ -1,0 +1,6 @@
+http://192.168.50.252:8080/authCode.html 
+
+     授权天数
+http://192.168.50.252:8080/jdwaLicense.html 
+
+   生产license（内部网）

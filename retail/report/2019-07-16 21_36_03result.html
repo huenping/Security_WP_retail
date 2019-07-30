@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>文件管理系统(4.2.2版本）UI自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>文件管理系统(4.2.2版本）UI自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-07-16 21:36:03</p>
+<p class='attribute'><strong>Duration:</strong> 0:17:38.963336</p>
+<p class='attribute'><strong>Status:</strong> Pass 30 Failure 4 Error 13</p>
+
+<p class='description'>版本：Windows 10 专业版 内存：16G 浏览器：Chrome</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='failClass'>
+    <td>a_login_sta.LoginTest: 网盘登录测试</td>
+    <td>5</td>
+    <td>4</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',5)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login1: 用户名、密码为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login2: 用户名正确，密码为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login3: 用户名为空，密码正确</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login4: 用户名与密码不匹配</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft1.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_login5: 用户名和密码正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5')" >
+        fail</a>
+
+    <div id='div_ft1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.5: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\a_login_sta.py", line 52, in test_login5
+    self.assertEqual(po.user_login_success(), '文件 - 文件管理系统内网', "登陆失败")
+AssertionError: '全部文件 - 文件管理系统内网' != '文件 - 文件管理系统内网'
+- 全部文件 - 文件管理系统内网
+? --
++ 文件 - 文件管理系统内网
+ : 登陆失败
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>b_loginout_sta.LoginOutTest: 网盘用户注销测试</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_cancel1: 用户注销</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        error</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\b_loginout_sta.py", line 18, in test_cancel1
+    self.login_out()
+  File "E:\Security_retail_test_project\retail\test_case\b_loginout_sta.py", line 13, in login_out
+    LoginOut(self.driver).user_login()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\loginoutPage.py", line 12, in user_login
+    self.loginout()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\loginoutPage.py", line 17, in loginout
+    self.find_element(By.XPATH, "//div[@id='expand']/div/img")[0].click()
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>c_upload_sta.UploadTest: 上传文件测试</td>
+    <td>2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',2)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01upload: 上传单个文件</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_02more_upload: 上传多个文件</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        fail</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\c_upload_sta.py", line 36, in test_02more_upload
+    self.assertEqual(1, 2, ["上传失败"])
+AssertionError: 1 != 2 : ['上传失败']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>d_new_folder_sta.FolderTest: 网盘新建文件夹测试</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',3)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_folder: 新建单个文件夹</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft4.2' class='none'>
+    <td class='failCase'><div class='testcase'>test2_folder: 多级文件夹</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        fail</a>
+
+    <div id='div_ft4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.2: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\d_new_folder_sta.py", line 36, in test2_folder
+    self.assertIn(file_name, all_file, ["创建失败"])
+AssertionError: 'test5' not found in '' : ['创建失败']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test3_folder: 重名文件夹</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='failClass'>
+    <td>e_usermodification_sta.UserTest: 用户管理</td>
+    <td>14</td>
+    <td>13</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',14)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_add_class: 添加部门</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test2_modify_class: 修改部门名称</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test3_clear_selection: 清除选择</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')" >
+        pass</a>
+
+    <div id='div_pt5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.3: el-tree
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test4_user_add: 用户创建测试</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test5_modify_name: 用户修改姓名</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test6_modify_passwd: 用户修改密码</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test7_modify_email: 修改用户email</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft5.8' class='none'>
+    <td class='failCase'><div class='testcase'>test8_modify_phone: 用户修改手机号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.8')" >
+        fail</a>
+
+    <div id='div_ft5.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.8: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\e_usermodification_sta.py", line 118, in test8_modify_phone
+    self.assertIn(phone_number, phone_numbers, ["修改手机号失败"])
+AssertionError: '12345678999' not found in [''] : ['修改手机号失败']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test91_modify_addr: 用户修改地址</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test92_modify_ROM: 用户修改存储空间</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.10')" >
+        pass</a>
+
+    <div id='div_pt5.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.10: ['2 GB']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test93_user_del: 用户删除测试</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test94_user_import: 用户导入</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test95_user_export: 用户导出</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test96_del_class: 删除部门</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>f_sharegroup_sta.GroupUser: 共享组用户管理</td>
+    <td>4</td>
+    <td>2</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c6',4)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_add_group: 添加组</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft6.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test2_adduser: 添加组成员用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.2')" >
+        error</a>
+
+    <div id='div_ft6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.2: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\f_sharegroup_sta.py", line 43, in test2_adduser
+    user_name, all_names = self.user_login3()
+  File "E:\Security_retail_test_project\retail\test_case\f_sharegroup_sta.py", line 21, in user_login3
+    return ShareGroup(self.driver).user_login3()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\sharedgroupPage.py", line 26, in user_login3
+    return self.add_user()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\sharedgroupPage.py", line 93, in add_user
+    self.find_element(By.XPATH, "//div[@role='tree']/div/div/span[text()='usertest (部门)']/parent::*/parent::div/div[2]/div[3]/div/label")[0].click()
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test3_deluser: 删除组成员用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.3')" >
+        error</a>
+
+    <div id='div_ft6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.3: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\f_sharegroup_sta.py", line 49, in test3_deluser
+    user_name, all_names = self.user_login4()
+  File "E:\Security_retail_test_project\retail\test_case\f_sharegroup_sta.py", line 25, in user_login4
+    return ShareGroup(self.driver).user_login4()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\sharedgroupPage.py", line 31, in user_login4
+    return self.del_user()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\sharedgroupPage.py", line 121, in del_user
+    self.find_element(By.XPATH, "//table[@class='el-table__body']/tbody/tr/td[3]/div/span[text()='3']/parent::div/parent::td/preceding-sibling::*/preceding-sibling::*")[0].click()
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test4_del_group: 删除组</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>g_preview_sta.PreviewTest: 预览功能测试</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c7',2)">Detail</a></td>
+</tr>
+
+<tr id='ft7.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01previewPNGfiles: 预览.png文件</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
+        error</a>
+
+    <div id='div_ft7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.1: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\g_preview_sta.py", line 24, in test_01previewPNGfiles
+    now_title = self.driver.find_element_by_xpath("/html/body/div[8]/div[5]/div").text
+  File "C:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Python36\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python36\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[8]/div[5]/div"}
+  (Session info: chrome=75.0.3770.90)
+  (Driver info: chromedriver=71.0.3578.80 (2ac50e7249fbd55e6f517a28131605c9fb9fe897),platform=Windows NT 10.0.16299 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02previewTXTfiles: 预览.txt文件</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.2')" >
+        error</a>
+
+    <div id='div_ft7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.2: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\g_preview_sta.py", line 40, in test_02previewTXTfiles
+    self.login.loginFunc()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\LoginPage.py", line 29, in loginFunc
+    self.inputValue(self.login_username_loc, username)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 56, in inputValue
+    inputB = self.findElement(*inputBox)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>h_search_sta.SearchTest: 精确搜索功能测试</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',2)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01searchfiles: 搜索文件</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02searchfolder: 搜索文件夹</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>i_share_sta.ShareTest: 共享功能测试</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td>6</td>
+    <td><a href="javascript:showClassDetail('c9',6)">Detail</a></td>
+</tr>
+
+<tr id='ft9.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_01shareuser: 分享文件给用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.1')" >
+        error</a>
+
+    <div id='div_ft9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.1: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\i_share_sta.py", line 47, in test_01shareuser
+    self.findElement(*self.shareInput_loc).send_keys("userdemo")
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02sharegroup: 分享给用户组</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.2')" >
+        error</a>
+
+    <div id='div_ft9.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.2: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\i_share_sta.py", line 63, in test_02sharegroup
+    self.login.loginFunc()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\LoginPage.py", line 29, in loginFunc
+    self.inputValue(self.login_username_loc, username)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 56, in inputValue
+    inputB = self.findElement(*inputBox)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_03sharedepartment: 分享文件给部门</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.3')" >
+        error</a>
+
+    <div id='div_ft9.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.3: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\i_share_sta.py", line 84, in test_03sharedepartment
+    self.login.loginFunc()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\LoginPage.py", line 29, in loginFunc
+    self.inputValue(self.login_username_loc, username)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 56, in inputValue
+    inputB = self.findElement(*inputBox)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_04treeshare: 树形分享给内部用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.4')" >
+        error</a>
+
+    <div id='div_ft9.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.4: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\i_share_sta.py", line 105, in test_04treeshare
+    self.login.loginFunc()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\LoginPage.py", line 29, in loginFunc
+    self.inputValue(self.login_username_loc, username)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 56, in inputValue
+    inputB = self.findElement(*inputBox)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_05sharecancel: 取消分享</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.5')" >
+        error</a>
+
+    <div id='div_ft9.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.5: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\i_share_sta.py", line 133, in test_05sharecancel
+    self.login.loginFunc()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\LoginPage.py", line 29, in loginFunc
+    self.inputValue(self.login_username_loc, username)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 56, in inputValue
+    inputB = self.findElement(*inputBox)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_06cplink: 复制直接链接</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.6')" >
+        error</a>
+
+    <div id='div_ft9.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.6: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\i_share_sta.py", line 157, in test_06cplink
+    self.login.loginFunc()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\LoginPage.py", line 29, in loginFunc
+    self.inputValue(self.login_username_loc, username)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 56, in inputValue
+    inputB = self.findElement(*inputBox)
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 40, in findElement
+    raise e
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>j_copy_sta.CopyTest: 复制文件功能测试</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01copyfiles: 文件复制到当前目录</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>k_move_sta.MoverTest: 移动文件功能测试</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01movefileslocal: 文件移动到当前目录</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>l_download_sta.DownTest: 下载文件</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c12',2)">Detail</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_downfile1: 下载文件</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft12.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_downfolder2: 下载文件和文件夹</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft12.2')" >
+        error</a>
+
+    <div id='div_ft12.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft12.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft12.2: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\l_download_sta.py", line 27, in test_downfolder2
+    folder_name, file_name, file_list = self.user_login2()
+  File "E:\Security_retail_test_project\retail\test_case\l_download_sta.py", line 17, in user_login2
+    return DownFolder(self.driver).user_login2()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\downloadPage.py", line 23, in user_login2
+    return self.download_folder()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\downloadPage.py", line 70, in download_folder
+    self.find_element(By.XPATH, "//td//span[@class='nametext']/span[text()='test1']/ancestor::*/td/label")[0].click()
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>m_replaceavatar_sta.ChangeAvatar: 更换头像测试</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c13',2)">Detail</a></td>
+</tr>
+
+<tr id='ft13.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test1_uploadlocal: 选择网盘本地头像</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.1')" >
+        error</a>
+
+    <div id='div_ft13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.1: Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\m_replaceavatar_sta.py", line 19, in test1_uploadlocal
+    url1, url2 = self.user_login1()
+  File "E:\Security_retail_test_project\retail\test_case\m_replaceavatar_sta.py", line 11, in user_login1
+    return ReplaceAvatar(self.driver).user_login1()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\avatarPage.py", line 13, in user_login1
+    return self.local_acatar()
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\avatarPage.py", line 37, in local_acatar
+    self.find_element(By.XPATH, "//table[@id='filestable']/tbody/tr[@data-entryname='2323.png']")[0].click()
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test2_uploadavatar: 上传头像</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>n_rename_sta.RenameTest: 重命名功能测试</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',2)">Detail</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01renamefiles: 文件重命名</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt14.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02renamefolders: 重命名文件夹</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>47</td>
+    <td>30</td>
+    <td>4</td>
+    <td>13</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

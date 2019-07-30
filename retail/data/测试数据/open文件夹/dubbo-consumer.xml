@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="agent" />
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://192.168.11.53:2181" />
+
+    <!-- 声明需要暴露的服务接口 -->
+    <!-- agent interface-->
+    <dubbo:reference id="agentService" interface="com.bestpay.seccore.service.AgentService" retries="0" timeout="60000"/>
+
+    <!-- agent interface-->
+    <dubbo:reference id="agentConfigService" interface="com.bestpay.seccore.service.AgentConfigService" retries="0" timeout="60000"/>
+
+    <!-- baseline interface -->
+    <dubbo:reference interface="com.bestpay.seccore.service.BaseLineService" id="baseLineService" retries="0" timeout="60000"/>
+
+    <!-- scanning interface -->
+    <dubbo:reference interface="com.bestpay.seccore.service.AgentScanningIDService" id="agentScanningService" retries="0" timeout="60000"/>
+    <!--agent守护-->
+    <dubbo:reference interface="com.bestpay.seccore.service.AgentDaemonIDService" id="agentDaemonIDService" retries="0" timeout="60000"/>
+
+    <!-- sendcmd interface -->
+    <dubbo:reference interface="com.bestpay.seccore.service.ReturnSendCmdService" id="returnSendCmdService" retries="0" timeout="60000"/>
+
+
+
+</beans>

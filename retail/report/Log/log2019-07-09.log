@@ -1,0 +1,200 @@
+2019-07-09 21:47:26,102 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:47:26,102 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:47:26,139 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DDD8> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:47:26,203 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:47:26,224 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DDD8> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:47:26,285 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:47:26,308 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DDD8> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:47:30,750 - base.py:[42] - [INFO] - The page of test_01previewPNGfiles (g_preview_sta.PreviewTest) had already find the element ('xpath', "//*[@id='searchbox']")
+2019-07-09 21:47:31,311 - base.py:[42] - [INFO] - The page of test_01previewPNGfiles (g_preview_sta.PreviewTest) had already find the element ('xpath', "//*[@id='searchbox']")
+2019-07-09 21:47:42,663 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:47:43,536 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:47:43,536 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:47:54,116 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:48:00,575 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:48:00,576 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:48:00,601 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DCC0> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:48:00,661 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:48:00,684 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DCC0> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:48:00,743 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:48:00,765 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DCC0> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:48:02,996 - base.py:[42] - [INFO] - The page of test_01searchfiles (h_search_sta.SearchTest) had already find the element ('xpath', "//*[@id='searchbox']")
+2019-07-09 21:48:03,566 - base.py:[42] - [INFO] - The page of test_01searchfiles (h_search_sta.SearchTest) had already find the element ('xpath', "//*[@id='searchbox']")
+2019-07-09 21:48:05,921 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DCC0> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:48:08,053 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628DCC0> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:48:11,593 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:48:11,593 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:48:11,611 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC4A8> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:48:11,668 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:48:11,685 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC4A8> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:48:11,748 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:48:11,765 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC4A8> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:48:13,504 - base.py:[42] - [INFO] - The page of test_02searchfolder (h_search_sta.SearchTest) had already find the element ('xpath', "//*[@id='searchbox']")
+2019-07-09 21:48:14,126 - base.py:[42] - [INFO] - The page of test_02searchfolder (h_search_sta.SearchTest) had already find the element ('xpath', "//*[@id='searchbox']")
+2019-07-09 21:48:17,677 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC4A8> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:48:19,801 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC4A8> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:48:26,207 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:48:26,207 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:48:26,233 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628D748> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:48:26,295 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:48:26,317 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628D748> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:48:26,377 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:48:26,399 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628D748> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:48:27,973 - base.py:[42] - [INFO] - The page of test_01shareuser (i_share_sta.ShareTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/tbody/tr[4]/td[1]/label')
+2019-07-09 21:48:28,065 - base.py:[42] - [INFO] - The page of test_01shareuser (i_share_sta.ShareTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/div[1]/div[1]/div[4]')
+2019-07-09 21:48:28,774 - base.py:[42] - [INFO] - The page of test_01shareuser (i_share_sta.ShareTest) had already find the element ('xpath', "//*[@id='shareWith-view17']")
+2019-07-09 21:48:29,849 - base.py:[42] - [INFO] - The page of test_01shareuser (i_share_sta.ShareTest) had already find the element ('css selector', '.share-autocomplete-item')
+2019-07-09 21:48:30,424 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628D748> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:48:32,540 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A0628D748> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:48:36,028 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:48:36,029 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:48:36,049 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC128> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:48:36,109 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:48:36,126 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC128> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:48:36,190 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:48:36,206 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062AC128> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:49:07,466 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:49:09,008 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:49:09,008 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:49:19,555 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:49:20,583 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:49:20,583 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:49:31,102 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:49:31,921 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:49:31,921 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:49:42,456 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:49:48,749 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:49:48,749 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:49:48,774 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1898> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:49:48,836 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:49:48,858 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1898> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:49:48,918 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:49:48,939 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1898> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:49:50,755 - base.py:[42] - [INFO] - The page of test_01copyfiles (j_copy_sta.CopyTest) had already find the element ('xpath', "//*[@id='fileList']/tr[4]/td[1]/label")
+2019-07-09 21:49:50,847 - base.py:[42] - [INFO] - The page of test_01copyfiles (j_copy_sta.CopyTest) had already find the element ('xpath', "//*[@id='selectedActionsList']/a[3]")
+2019-07-09 21:49:51,472 - base.py:[42] - [INFO] - The page of test_01copyfiles (j_copy_sta.CopyTest) had already find the element ('xpath', "//*[@id='body-user']/div[8]/div[2]/button[1]")
+2019-07-09 21:49:52,958 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1898> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:49:55,022 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1898> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:50:04,541 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:50:04,541 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:50:04,593 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1B70> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:50:04,651 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:50:04,672 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1B70> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:50:04,733 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:50:04,755 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1B70> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:50:06,374 - base.py:[42] - [INFO] - The page of test_01movefileslocal (k_move_sta.MoverTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/tbody/tr[4]/td[1]/label')
+2019-07-09 21:50:06,475 - base.py:[42] - [INFO] - The page of test_01movefileslocal (k_move_sta.MoverTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/thead/tr/th[2]/div/span/a[3]')
+2019-07-09 21:50:07,120 - base.py:[42] - [INFO] - The page of test_01movefileslocal (k_move_sta.MoverTest) had already find the element ('xpath', "//*[@id='body-user']/div[8]/div[2]/button[2]")
+2019-07-09 21:50:07,662 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1B70> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:50:09,728 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062B1B70> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:52:14,698 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:52:14,698 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:52:14,722 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062D2048> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:52:14,779 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:52:14,800 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062D2048> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:52:14,860 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:52:14,880 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062D2048> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:52:18,374 - base.py:[42] - [INFO] - The page of test_01renamefiles (n_rename_sta.RenameTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/tbody/tr[4]/td[1]/label')
+2019-07-09 21:52:18,472 - base.py:[42] - [INFO] - The page of test_01renamefiles (n_rename_sta.RenameTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/thead/tr/th[2]/div/span/a[1]')
+2019-07-09 21:52:19,603 - base.py:[42] - [INFO] - The page of test_01renamefiles (n_rename_sta.RenameTest) had already find the element ('xpath', "//*[@id='fileList']/tr[4]/td[2]/form/input")
+2019-07-09 21:52:21,087 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062D2048> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:52:23,220 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062D2048> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:52:26,996 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:52:26,996 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:52:27,018 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062C8C50> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:52:27,073 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:52:27,090 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062C8C50> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:52:27,148 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:52:27,164 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062C8C50> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:52:28,006 - base.py:[42] - [INFO] - The page of test_02renamefolders (n_rename_sta.RenameTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/tbody/tr[2]/td[1]/label')
+2019-07-09 21:52:28,085 - base.py:[42] - [INFO] - The page of test_02renamefolders (n_rename_sta.RenameTest) had already find the element ('xpath', '/html/body/div[3]/div/div[2]/div[3]/table/thead/tr/th[2]/div/span/a[1]')
+2019-07-09 21:52:28,167 - base.py:[42] - [INFO] - The page of test_02renamefolders (n_rename_sta.RenameTest) had already find the element ('xpath', "//*[@id='fileList']/tr[2]/td[2]/form/input")
+2019-07-09 21:52:29,607 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062C8C50> had already find the element ('xpath', "//*[@id='expand']")
+2019-07-09 21:52:31,727 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062C8C50> had already find the element ('xpath', "//*[@id='expanddiv']/ul/li[2]/a")
+2019-07-09 21:52:40,848 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:52:40,848 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:52:40,877 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062E0390> had already find the element ('xpath', "//*[@id='user']")
+2019-07-09 21:52:40,937 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='user']")] is receiveing value [admin]
+2019-07-09 21:52:40,958 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062E0390> had already find the element ('xpath', "//*[@id='password']")
+2019-07-09 21:52:41,015 - base.py:[64] - [INFO] - inputValue:[('xpath', "//*[@id='password']")] is receiveing value [admin2003]
+2019-07-09 21:52:41,035 - base.py:[42] - [INFO] - The page of <page_obj.LoginPage.login object at 0x0000015A062E0390> had already find the element ('xpath', "//*[@id='submit']")
+2019-07-09 21:52:54,738 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:52:55,869 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:52:55,869 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:53:06,467 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:53:07,321 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:53:07,321 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:53:17,888 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-07-09 21:53:18,739 - base.py:[28] - [INFO] - _open is accessing address http:192.168.0.91 at line[46]
+2019-07-09 21:53:18,739 - base.py:[32] - [INFO] - http:192.168.0.91 loading successed!
+2019-07-09 21:53:29,277 - base.py:[39] - [ERROR] - finding element timeout!, details
+Traceback (most recent call last):
+  File "E:\Security_retail_test_project\retail\test_case\page_obj\base.py", line 37, in findElement
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+  File "C:\Python36\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
